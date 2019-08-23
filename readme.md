@@ -14,13 +14,15 @@ sqlite> .import /*file name*/ /*table name*/
 * To get head of any file
 
 ```
-
+$ head -n /*NUMBEROFLINES*/ filename
 ```
-
 
 * Add a string after each line in file
 
 ```
-sed -e 's/$/string after each line/' -i filename
+$ sed -e 's/$/string after each line/' -i filename
 ```
-> Sometimes it works after removing the -i flag
+> If this doesn't work, create a new updated file.
+```
+$ sed -e 's/$/string after each line/' -i filename >> new_filename
+```
